@@ -1,0 +1,64 @@
+@import "src/css/mixin";
+
+#PhoneNumber{
+    padding-top: 54px;
+    text-align: center;
+    background: #fff;
+
+    .count-down-word{
+        font-size: 14px;
+        color: $gray;
+        letter-spacing: -0.58px;
+        margin-bottom: 40px;
+        font-weight: 600;
+    }
+    .min{
+        font-family: Roboto-Medium;
+    }
+    .mobile{
+        font-size: 36px;
+        color: $blue;
+        letter-spacing: -0.2px;
+        line-height: 36px;
+        font-weight: 600;
+    }
+    .tip{
+        font-size: 14px;
+        color: $lightgray;
+        letter-spacing: -0.58px;
+        line-height: 14px;
+        margin-bottom: 145px;
+    }
+    img{
+        height: 80px;
+        width: 80px;
+        margin: 0 auto;
+    }
+    .name{
+        font-size: 20px;
+        color: $black;
+        letter-spacing: 0;
+        line-height: 20px;
+        margin: 14px 0 8px 0;
+    }
+    .company{
+        font-size: 14px;
+        color: $gray;
+        letter-spacing: 0;
+        line-height: 14px;
+        margin-bottom: 29px;
+    }
+    .lable{
+        span{
+            display: inline-block;
+            font-size: 12px;
+            color: #A3C2FC;
+            letter-spacing: 0;
+            line-height: 12px;
+            padding: 5px 10px;
+            border: 1px solid #A3C2FC;
+            border-radius: 2px;
+            margin-right: 5px;
+        }
+    }
+}

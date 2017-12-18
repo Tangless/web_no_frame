@@ -1,0 +1,115 @@
+<div id="QuotationTool">
+    <style>
+        @@include('modules/QuotationTool/main.css.min')
+    </style>
+<div class="quotationTool_Vue">
+    <!--安装地址：all-->
+    <div class="address">
+        <div class="title">安装地址</div>
+        <p evt="openSelectCity">
+            <span class="sel-pos">{{selPos.prov}}，{{selPos.city}}</span>
+            <span class="icon-data-message"></span>
+        </p>
+    </div>
+    <!--使用环境：all-->
+    <div class="environment">
+        <div class="title">使用环境</div>
+        <li v-bind:class="{radioSelsct:type.id==demand.typeId}" v-for="type in demand.typeList[demand.menuTab]" v-bind:typeId="type.id"
+            evt="chooseType">
+            <strong> </strong><span v-html="type.name"></span>
+        </li>
+
+    </div>
+    <!--故障类型：维修-->
+    <div class="fault" v-if="demand.menuTab == 'repair'">
+        <div class="title">故障类型</div>
+        <li type="fault" v-bind:faultId="fault.id" v-bind:class="{radioSelsct: fault.id ==demand.faultId}" v-for="fault in demand.typeList.fault"
+            evt="chooseOption">
+            <strong> </strong><span v-html="fault.name"></span>
+        </li>
+    </div>
+    <!--使用时间：租赁-->
+    <div class="useTime" v-if="demand.menuTab == 'rental'">
+        <div class="title">使用时间</div>
+        <div class="start-time" evt="getStartTime">
+            <span v-html="demand.startTime"></span>
+            <span class="icon-data-message"></span>
+        </div>
+        <div class="rental-calendar">
+            <div id="demo">
+                <div id="ca"></div>
+                <input type="text" id="dt" class="hide" placeholder="trigger calendar">
+                <div id="dd"></div>
+            </div>
+        </div>
+    </div>
+    <!--租期：租赁-->
+    <div class="totalTime" v-if="demand.menuTab == 'rental'">
+        <div class="title">租期</div>
+        <div class="auction-input">
+            <div class="count minus" type="minus" evt="totalTime">—</div>
+            <input class="input input-time" v-model="demand.totalTime" />
+            <span class="label1">天</span>
+            <div class="count" type="plus" evt="totalTime">+</div>
+        </div>
+    </div>
+    <!--面积：安装，租赁-->
+    <div class="size" v-if="demand.menuTab != 'repair'">
+        <div class="title">面积</div>
+        <div class="write-size">
+            <span class="s-width">
+                    <input class="input input-size input-wide" v-model="demand.sWidth"/>
+                    <em>m&nbsp;&nbsp;&nbsp;宽</em>
+                </span>
+            <span class="icon-cross"></span>
+            <span class="s-height">
+                    <input class="input input-size input-hide" v-model="demand.sHeight"/>
+                    <em>m&nbsp;&nbsp;&nbsp;高</em>
+                </span>
+
+        </div>
+    </div>
+    <!--户内外：安装，租赁-->
+    <div class="surr" v-if="demand.menuTab != 'repair'">
+        <div class="title">户内外</div>
+        <span class="surr-type" type="location" v-for="location in locationOptions" v-bind:class="{radioSelsct: location.id == demand.locationId}"
+            evt="chooseOption" v-bind:locationId="location.id"><strong></strong><span v-html="location.name"></span></span>
+    </div>
+    <!--颜色要求：安装-->
+    <div class="color" v-if="demand.menuTab == 'install'">
+        <div class="title">颜色要求</div>
+        <span class="color-type" type="color" v-for="color in demand.colorOptions" v-bind:class="{radioSelsct: color.id == demand.colorId}"
+            evt="chooseOption" v-bind:colorId="color.id"><strong> </strong><span v-html="color.name"></span></span>
+    </div>
+    <!--观看距离：安装，租赁-->
+    <div class="distance" v-if="demand.menuTab != 'repair'">
+        <div class="title">观看距离</div>
+        <!--外层容器-->
+        <div class="spider">
+            <!--填充块-->
+            <div class="fill"></div>
+            <!--滑块-->
+            <div class="slider"></div>
+            <!--words-->
+            <div class="words" v-html="demand.currDistance"></div>
+        </div>
+    </div>
+    <!--离地高度：安装-->
+    <div class="height" v-if="demand.menuTab == 'install'">
+        <div class="title">离地高度</div>
+        <div class="write-height">
+            <input class="input input-height" placeholder="输入离地高度" v-model="demand.toBottom" />
+            <em>m</em>
+        </div>
+    </div>
+    <!--安装方式：安装-->
+    <div class="install" v-if="demand.menuTab == 'install'">
+        <div class="title">安装方式</div>
+        <li v-bind:installId="install.id" type="install" v-for="install in demand.installOptions" v-bind:class="{radioSelsct: install.id ==demand.installId}"
+            evt="chooseOption">
+            <strong> </strong><span v-html="install.name"></span>
+        </li>
+
+    </div>
+</div>
+</div>

@@ -1,0 +1,59 @@
+<div id="SupplierList">
+    <style>
+        @@include('modules/SupplierList/main.css.min')
+    </style>
+<div class="content">
+    <div class="supplier-number">
+        <i>您附近有 <span class="text-primary">{{cnt}}</span> 家</i>
+        <div class="right hide">
+            <em>默认</em>
+            <em class="active">成交量</em>
+            <em>价格</em>
+        </div>
+    </div>
+    <div class="lists">
+        <div class="scroll-pane">
+            <div class="col-lg-4 col-md-6 item" v-for="(item,index) in supplier_list" v-bind:index="index" evt="openPhoneNumber">
+                <div class="list-border">
+                    <div class="list-header text-primary">
+                        <em class="unit" v-if="index < 4 && item.price != 0">&yen;</em>
+                        <em class="price smallFont" v-if="item.price == 0">在线议价</em>
+                        <em class="price" v-else v-bind:class="{'smallFont': index>3 || item.price==0}" v-html="item.price"></em>
+                        <button class="btn btn-primary phone">
+                            <span class="icon-phone06"></span>&nbsp;联系Ta
+                        </button>
+                        <!--<span class="chating icon-message02" evt="openChatRoom">-->
+                        <span class="unread" v-if="item.unread >0">{{item.unread}}</span>
+                        </span>
+                    </div>
+
+                    <div class="list-detail">
+                        <img v-bind:src="item.avatar"/>
+                        <p class="name" v-html="item.nickname"></p>
+                        <p class="company" ><span v-html="item.com"></span><span class="icon-renzheng2 text-primary"></span></p>
+                        <p class="succ-order">近期参与 <span v-html="item.info_bid_count">{{item.info_bid_count}}</span> 笔</p>
+                        <p class="lable">
+                            <span class="label-item" v-for="tag in item.tags">{{tag}}</span>
+                        </p>
+                    </div>
+                </div>
+        </div>
+            <div class="clearfix"></div>
+        </div>
+        <div class="load-more col-sm-12" v-if="supplier_list.length < 36 || current_page == 'max'">-&nbsp;-&nbsp;&nbsp;已经到底了&nbsp;&nbsp;-&nbsp;-</div>
+    </div>
+    <div class="supplier-footer">
+        <div class="mobile">
+            <input class="input-phone" placeholder="请输入您的手机号" v-model="user.mobile"/>
+            <button class="btn" evt="sendMobile">确定</button>
+            <span class="slogan hidden-sm hidden-xs">帮我挑选 3 家，工程师上门报价</span>
+            <div class="error-Tip"><span class="icon-mark"></span><span class="error-data"></span></div>
+            <!-- 提交后的遮罩 -->
+            <div class="hasSubmit">
+                <h4 class="title"><span class="icon-checkmark02"></span>您的需求已提交</h4>
+                <p class="info">15分钟内，我们的供应商将会与您电话联系，提供方案和报价。</p>
+            </div>
+        </div>
+    </div>
+</div>
+</div>

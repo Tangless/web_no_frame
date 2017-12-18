@@ -1,0 +1,48 @@
+<div id="Menu" data-mjs="`{module.js}`">
+    <style>
+        @@include('modules/Menu/main.css.min')
+    </style>
+<div class="logo text-left">
+    <a class="icon-logo text-primary" herf="javascript:void(0);"></a>
+    <span evt="test">上市公司洲明科技旗下</span>
+</div>
+<div class="list">
+    <!--<p class="digital-signage">数字标牌</p>-->
+    <span class="led">LED显示屏</span>
+    <li type="install" v-bind:class="{active: demand.menuTab == 'install'}">
+        <a href="#install">
+            <em></em>
+            <span>制作安装</span>
+        </a>
+    </li>
+    <li type="repair" v-bind:class="{active: demand.menuTab == 'repair'}">
+        <a href="#repair">
+            <em></em>
+            <span>维修</span>
+        </a>
+    </li>
+    <li type="rental" v-bind:class="{active: demand.menuTab == 'rental'}">
+        <a href="#rental">
+            <em></em>
+            <span>租赁</span>
+        </a>
+    </li>
+</div>
+<div class="bottom">
+    <li class="link">
+        <a href="/join.html">供应商加盟</a>
+        <a href="/about.html">了解万屏汇</a>
+    </li>
+    <li class="phone">
+        <a>客服热线：</a>
+        <a>周一至周日 9:00-22:00</a>
+        <em>400-998-0215</em>
+    </li>
+    <li class="dns">
+        <img src="img/beian.png" alt="备案图标" style="vertical-align:text-bottom;top:4px;position:relative;">
+        <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502000037" style="display:inline;text-decoration:none;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">粤公网安备 44030502000037号</a>
+        <p>粤ICP备16014213号-1</p>
+        <p>版权所有：深圳市万屏时代科技有限公司</p>
+    </li>
+</div>
+</div>

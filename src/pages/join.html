@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   @@include('modules/Head.html')
+</head>
+<style>
+    #Header{position:relative;z-index:222}#Header .content{height:50px;padding:13px 0;position:relative;-webkit-font-smoothing:antialiased}#Header .header .content:before{content:'';display:inline-block;height:100%;vertical-align:middle}#Header .headLogo{display:inline-block;width:105px;height:23px;font-size:24px;vertical-align:top;margin-left:30px;color:#4785f9}#Header .unilumin{height:12px;font-size:12px;font-weight:300;line-height:1;letter-spacing:.3px;margin-left:2px;color:#212022;vertical-align:bottom}#Header .nav{display:inline-block;vertical-align:top;height:37px;float:right}#Header .nav a{display:inline-block;height:14px;font-size:14px;font-weight:300;line-height:1;text-align:center;color:#83848e;font-size:14px;-webkit-transition:all .2s cubic-bezier(.4,.5,.5,.4);transition:all .2s cubic-bezier(.4,.5,.5,.4)}#Header .nav a.active,#Header .nav a:hover{color:#212022}#Header .user{color:#b3b5b7;margin-right:-58px;margin-left:76px}#Header .icon-user-pc{margin-right:1.3px}#Header .ll,#Header .lo{margin-right:24px;margin-left:0}#Header [class^=ch-]{margin-right:50px}@media screen and (min-width:767px) and (max-width:992px){#Header .headLogo{margin-left:24px}#Header .ll,#Header .lo{margin-right:24px;margin-left:0}#Header [class^=ch-]{margin-right:28px}}@media screen and (min-width:992px) and (max-width:1200px){#Header .headLogo{margin-left:26px}#Header .ll,#Header .lo{margin-right:26px}}@media screen and (min-width:1200px){#Header .headLogo{margin-left:30px}#Header .ll,#Header .lo{margin-right:29.5px}}#Header .login-in [class^=ch-]{display:inline-block}#Header .login-in .ll{display:none}#Header .login-in .lo{display:inline-block}#Header .login-in .user{display:inline-block}#Header .login-out [class^=ch-]{display:inline-block}#Header .login-out .ll{display:inline-block}#Header .login-out .lo{display:none}#Header .login-out .user{display:none}@-webkit-keyframes loader{from{-webkit-transform:rotate(0) translateZ(0);transform:rotate(0) translateZ(0)}to{-webkit-transform:rotate(360deg) translateZ(0);transform:rotate(360deg) translateZ(0)}}@keyframes loader{from{-webkit-transform:rotate(0) translateZ(0);transform:rotate(0) translateZ(0)}to{-webkit-transform:rotate(360deg) translateZ(0);transform:rotate(360deg) translateZ(0)}}#CustomerItemPage #Header .ch-index{color:#212022!important}#Repair #Header .ch-repair{color:#212022!important}#RentalPage #Header .ch-rental{color:#212022!important}#SupplierPage #Header .ch-supplier{color:#212022!important}
+    
+    #JoinSupplier section{position:relative;overflow:hidden}#JoinSupplier .picture-wechat-1{height:135px;width:135px;margin-top:40px;margin-bottom:53px}#JoinSupplier .page1{width:100%;background:url(/img/bannr1920.jpg) center top no-repeat #e3e8ee;background-size:100% 100%}#JoinSupplier .page2,#JoinSupplier .page4{width:100% ;background: #fff;}#JoinSupplier .page3{width:100%;background-color:#f7faff}#JoinSupplier #page1{width:100%}#JoinSupplier h1{width:371px;height:172px;font-size:72px;font-weight:300;font-style:normal;font-stretch:normal;line-height:1.19;letter-spacing:1.8px;color:#fff;margin:100px 0 27px 0}#JoinSupplier h2{font-size:30px;font-weight:300;font-style:normal;font-stretch:normal;line-height:1.4;color:#212022;margin:0}#JoinSupplier h3{width:412px;height:72px;font-size:20px;font-weight:300;font-style:normal;font-stretch:normal;line-height:1.8;letter-spacing:1.5px;text-align:justify;-webkit-font-smoothing:antialiased;color:#fff;margin:0}#JoinSupplier h4{height:18px;font-size:18px;font-weight:300;font-style:normal;font-stretch:normal;line-height:1;letter-spacing:1.8px;color:#212022;text-align:left;margin:0 0 16px 0}#JoinSupplier p{font-size:12px;font-weight:300;font-style:normal;font-stretch:normal;line-height:1.5;letter-spacing:1.2px;-webkit-font-smoothing:antialiased;color:#83848e;text-align:left}#JoinSupplier [class^=text-]{font-size:14px;font-weight:300;font-style:normal;font-stretch:normal;line-height:1.57;letter-spacing:1.4px;color:#83848e;margin:0}#JoinSupplier #page2{width:100%}#JoinSupplier #page2 h2{font-size:30px;font-weight:300;font-style:normal;font-stretch:normal;line-height:1.4;color:#212022;margin:0}#JoinSupplier #page2 .to-top{margin-top:200px}@media screen and (min-width:992px){#JoinSupplier #page2 .to-top{margin-top:271px}}#JoinSupplier #page2 .text-page2{margin-top:24px;margin-bottom:187px}#JoinSupplier #page2 .bg-img{width:258.2px;height:525px;margin:90px auto;background:url(/img/6.png) center top no-repeat;background-size:100%;position:relative}#JoinSupplier #page2 .carousel-inner{background-size:100%;height:395px;width:220px;top:66px;left:19px;position:relative}#JoinSupplier #page2 .carousel-inner img{height:395px;width:220px}#JoinSupplier #page2 .carousel-control{background-image:none;width:15%;top:50%;bottom:50%}#JoinSupplier #page2 .left{text-align:left}#JoinSupplier #page2 .right{text-align:right}#JoinSupplier #page2 .icon-left-pc,#JoinSupplier #page2 .icon-right{color:#212022;text-shadow:none}#JoinSupplier .paragraph-2{display:none}#JoinSupplier #page3{width:100%;text-align:center}#JoinSupplier #page3 h2{width:100%;height:30px;margin-top:65px;line-height:1}#JoinSupplier #page3 .text-page3{width:100%;height:14px;line-height:1;letter-spacing:1.4px;color:#83848e;text-align:center;margin-top:16px;margin-bottom:52px}#JoinSupplier #page3 [class^=step-]{position:relative}#JoinSupplier #page3 [class^=icon-]{height:32.8px;color:#4785f9;float:left;font-size:32.8px}#JoinSupplier #page3 [class^=words-]{float:left;width:73%;margin-left:16.2px}#JoinSupplier #page4{width:100%;text-align:center}#JoinSupplier #page4 h2{width:100%;height:30px;margin-top:90px;line-height:1}#JoinSupplier #page4 .text-page4{width:100%;height:14px;line-height:1;letter-spacing:1.4px;color:#83848e;text-align:center;margin-top:16px;margin-bottom:61.2px}#JoinSupplier #page4 .QR-code{width:480.5px;margin:0 auto}#JoinSupplier #page4 .wechat .picture-wechat-2{width:168px;height:168px}#JoinSupplier #page4 .wechat span{margin-top:10px;margin-bottom:67px;font-size:14px;letter-spacing:1.4px;color:#83848e;display:block}#JoinSupplier #page4 [class^=code-]{display:inline;float:left}#JoinSupplier #page4 .code-iphone{margin-right:215.1px}#JoinSupplier #page4 [class^=img-]{width:132.7px;height:132.7px;background-size:100%!important;margin-bottom:20px}#JoinSupplier #page4 .img-iphone{background:url(/img/code3.png) center top no-repeat}#JoinSupplier #page4 .img-android{background:url(/img/code3.png) center top no-repeat}#JoinSupplier #page4 [class^=btn-]{border-radius:4px;width:110px;height:37px;margin:15px auto 80px auto}#JoinSupplier #page4 .btn-iphone{background:url(/img/app-store.png) center top no-repeat;background-size:100%}#JoinSupplier #page4 .btn-android{background:url(/img/google-paly.png) center top no-repeat;background-size:100%}#JoinSupplier #page1,#JoinSupplier #page2,#JoinSupplier #page3,#JoinSupplier #page4{padding-left:150px;padding-right:150px;width:1440px}@media screen and (min-width:768px){#JoinSupplier #page2 .text-page2{width:284px}}@media screen and (min-width:992px){#JoinSupplier #page2 .text-page2{width:369px}}@media screen and (min-width:1200px){#JoinSupplier #page1,#JoinSupplier #page2,#JoinSupplier #page3,#JoinSupplier #page4{padding-left:150px;padding-right:150px;margin-left:auto;margin-right:auto;width:1200px}#JoinSupplier .col-lg-5{width:410px}#JoinSupplier #page2 .text-page2{width:450px}}@media screen and (min-width:1440px){#JoinSupplier #page1,#JoinSupplier #page2,#JoinSupplier #page3,#JoinSupplier #page4{padding-left:150px;padding-right:150px;margin-left:auto;margin-right:auto;width:1440px}}@media screen and (max-width:1440px){#JoinSupplier .page1{width:100%;background:url(/img/bannr1440.png) center top no-repeat #e3e8ee;background-size:100% 100%}}@media screen and (max-width:1200px){#JoinSupplier #page1,#JoinSupplier #page2,#JoinSupplier #page3,#JoinSupplier #page4{padding-left:26px;padding-right:26px;width:992px}#JoinSupplier .page1{width:100%;background:url(/img/bannr1440.png) center top no-repeat #e3e8ee;background-size:100% 100%}}@media screen and (max-width:992px){#JoinSupplier #page1,#JoinSupplier #page2,#JoinSupplier #page3,#JoinSupplier #page4{padding-left:24px;padding-right:24px;width:768px}#JoinSupplier .page1{width:100%;background:url(/img/bannr992.png) center top no-repeat #e3e8ee}}@media screen and (max-width:768px){#JoinSupplier #page1,#JoinSupplier #page2,#JoinSupplier #page3,#JoinSupplier #page4{padding-left:24px;padding-right:24px;width:768px}#JoinSupplier .page1{width:100%;background:url(/img/bannr768.png) center top no-repeat #e3e8ee}}#JoinSupplier .btn{width:281px;height:55px;padding-top:16px;border-radius:2px;background-color:#4785f9;-webkit-box-shadow:0 4px 10px 0 rgba(32,32,33,.17);box-shadow:0 4px 10px 0 rgba(32,32,33,.17);margin:70px 0 102px 0;border-color:transparent}#JoinSupplier .btn:hover{background:#357ae8}#JoinSupplier .btn:active{-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}#JoinSupplier .btn .icon-download-pc{margin-right:10px}#JoinSupplier .details{margin-bottom:60px}
+
+    #ItemFooter{background-color:#212022;padding-top:50px;padding-bottom:4px}#ItemFooter .item-top{width:1140px;margin:0 auto}#ItemFooter .item-logo{float:left;width:254px}#ItemFooter .item-logo .icon-logo{font-size:24px;color:#83848e}#ItemFooter .item-link{width:616px;float:left}#ItemFooter .link-one{float:left;font-size:14px;color:#b3b5b7;margin-right:110px;display:inline;margin-bottom:24px;width:75px}#ItemFooter .link-two{float:left;font-size:12px;color:#83848e;margin-right:110px;display:inline;width:75px;height:31px;-webkit-transition:all .2s cubic-bezier(.4,.5,.5,.4);transition:all .2s cubic-bezier(.4,.5,.5,.4)}#ItemFooter .link-two span{float:left;height:16px}#ItemFooter .link-two:hover span{border-bottom:1px solid #83848e}#ItemFooter .item-help{float:right;width:214px}#ItemFooter .item-help h1{font-size:14px;color:#b3b5b7;margin-top:2px;margin-bottom:15px}#ItemFooter .item-help h6{font-size:24px;color:#b3b5b7;font-weight:400;margin-top:0;margin-bottom:6px}#ItemFooter .work-time{font-size:12px;color:#83848e;margin-bottom:6px}#ItemFooter .btn-help{width:90px;height:32px;padding:0;font-size:14px;border-radius:2px;border-color:transparent;background-color:#4785f9}#ItemFooter .btn-help:hover{background:#357ae8}#ItemFooter .btn-help:active{-webkit-box-shadow:inset 0 3px 5px rgba(0,0,0,.125);box-shadow:inset 0 3px 5px rgba(0,0,0,.125)}#ItemFooter .item-bottom{width:100%;border-top:1px solid #3c3a3f;text-align:center;font-size:12px;color:#5e5a64;margin-top:39px;height:40px;line-height:28px}#ItemFooter .newline{margin-right:200px}@media (max-width:1200px){#ItemFooter .item-top{width:940px}#ItemFooter .item-logo{width:232px}#ItemFooter .link-one{margin-right:81px}#ItemFooter .item-link{width:450px}#ItemFooter .link-two{margin-right:81px}#ItemFooter .item-help{width:227px}#ItemFooter .newline{margin-right:110px}}@media (max-width:992px){#ItemFooter .item-top{width:720px}#ItemFooter .item-logo{width:168px}#ItemFooter .link-one{margin-right:44px}#ItemFooter .item-link{width:339px}#ItemFooter .link-two{margin-right:44px}#ItemFooter .item-help{width:207px}#ItemFooter .newline{margin-right:60px}}
+</style>
+
+<body>
+    <section id="Header">
+        <div class="content">
+            <a class="headLogo icon-logo" href="/#install"></a>
+            <span class="unilumin">上市公司洲明旗下</span>
+            <div class="nav login-out">
+                <a class="ch-index" href="/#install" title="我要报装">我要报装</a>
+                <a class="ch-repair" href="/#repair" title="我要维修">我要维修</a>
+                <a class="ch-rental" href="/#rental" title="我要租屏">我要租屏</a>
+                <a class="ch-supplier" href="/join.html">供应商加盟</a>
+                <a class="ll hide" href="#" ievent='showLoginForm'><i class="ll-icon"></i>登录</a>
+                <a class="lo" href="#" ievent="loginOut"><i class="lo-icon"></i>注销&nbsp<span class="user-nick"></span></a>
+            </div>
+        </div>
+    </section>
+    <section id="JoinSupplier">
+        <div class="page1">
+            <section id="page1">
+                <div class="join-top">
+                    <h1>加盟万屏汇享海量订单</h1>
+                    <h3>微信扫码关注万屏汇公众号，已有19861家工程商入驻，7483家通过认证。</h3>
+                    <img class="picture-wechat-1 " src="/img/wechat.jpg">
+                </div>
+            </section>
+        </div>
+        <div class="page2">
+            <section id="page2" class="row">
+                <div class="carousel-s col-md-6 col-sm-6 col-lg-5 ">
+                    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel" data-interval="false">
+                        <!-- Wrapper for slides -->
+                        <div class="bg-img">
+                            <div class="carousel-inner">
+                                <div class="item active" name="1">
+                                    <img src="/img/7.png" alt="First slide">
+                                </div>
+                                <div class="item" name="2">
+                                    <img src="/img/8.png" alt="Second slide">
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                            <span class="icon-left-pc"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                            <span class="icon-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="paragraph-1 col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1 col-lg-5 col-lg-offset-1">
+                    <h2 class="to-top">上千用屏需求客户，<br>订单源源不断</h2>
+                    <p class="text-page2">每天上千客户享受万屏汇提供的便捷用屏服务，已有近万供应商从万屏汇获得订单，全天24个小时不间断推送。</p>
+                </div>
+                <div class="paragraph-2 col-md-5 col-sm-5 col-md-offset-1 col-sm-offset-1 col-lg-5 col-lg-offset-1">
+                    <h2 class="to-top">推送优质的订单，<br>降低沟通成本
+                    </h2>
+                    <p class="text-page2">我们一从始至终思考的就是如何为您筛选出优质的订单，我们一如既往为您的生意做最高效的回报，让您减少拓客成本，减少与意向不强的客户进行无效沟通。</p>
+                </div>
+            </section>
+        </div>
+        <div class="page3">
+            <section id="page3">
+                <h2>操作流程</h2>
+                <p class="text-page3">为了更加便捷服务，我们只开放工程商端微信公众号</p>
+                <div class="row">
+                    <div class="col-sm-4 col-md-4 col-lg-4 step-2">
+                        <span class="icon-scanning"></span>
+                        <div class="words-load">
+                            <h4>关注公众号</h4>
+                            <p class="details">扫描官网二维码，或微信搜索“万屏汇”，点开“万屏汇-公众号”，即可点击关注</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 step-2">
+                        <span class="icon-data-pc"></span>
+                        <div class="words-load">
+                            <h4>填写资料</h4>
+                            <p class="details">打开万屏汇公众号，绑定手机并丰富您的称呼、公司全称等相关信息</p>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 col-md-4 col-lg-4 step-3">
+                        <span class="icon-join-pc"></span>
+                        <div class="words-load">
+                            <h4>完成加盟</h4>
+                            <p class="details">万屏汇工作人员将在24h内审核您提交的信息，通过审核即可获得订单信息</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <div class="page4">
+            <section id="page4">
+                <h2>关注公众号查看订单</h2>
+                <p class="text-page4">更多LED屏订单将在公众号推送</p>
+                <div class="QR-code">
+                    <div class="wechat">
+                        <img class="picture-wechat-2 " src="/img/wechat.jpg">
+                        <span>[微信扫码 关注万屏汇公众号]</span>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section id="ItemFooter">
+        <div class="item-top clearfix">
+        <div class="item-logo">
+            <span class="icon-logo"></span>
+        </div>
+        <div class="item-link clearfix">
+            <a class="link-one">关于我们</a>
+            <a class="link-one newline">媒体中心</a>
+            <a href="/about.html" class="link-two" ><span>了解万屏汇</span></a>
+            <a href="/about.html#report" class="link-two link-three newline"><span>媒体报道</span></a><br>
+            <a href="/about.html#connect" class="link-two" ><span>联系我们</span></a>
+        </div>
+        <div class="item-help">
+            <h1>客服热线：</h1>
+            <p class="work-time">周一至周日 9:00-22:00</p>
+            <h6>400-998-0215</h6>
+            <!--p><button class="btn btn-primary btn-help">在线帮忙</button></p-->
+        </div>
+    </div>
+    <div class="item-bottom">
+        <div class="forWph hide" style="margin:0 auto; padding:7px 0;">
+            <img src="/img/beian.png" alt="备案图标" style="vertical-align:text-bottom;top:4px;position:relative;">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=44030502000037" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">粤公网安备 44030502000037号</a>
+            &nbsp;&nbsp;<a target="_blank" href="http://www.miitbeian.gov.cn" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">粤ICP备16014213号-1</a>
+            <span style="display:inline-block;text-decoration:none;height:20px;line-height:20px;margin: 0px 0px 0px 15px; color:#939393;">版权所有：深圳市万屏时代科技有限公司</span>
+        </div>
+        <div class="for88ba hide" style="margin:0 auto; padding:7px 0;">
+            <a target="_blank" href="http://www.miitbeian.gov.cn" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京ICP备09112544号</a>
+            <span style="display:inline-block;text-decoration:none;height:20px;line-height:20px;margin: 0px 0px 0px 15px; color:#939393;">版权所有：北京喜淘聚源科技有限公司</span>
+        </div>
+    </div>
+    </section>
+
+    <script src="js/vendor.js"></script>
+    <script src="js/api.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            if(window.location.href.indexOf("wanpinghui") > 0 ){
+                $('.forWph').removeClass('hide');
+            }else{
+                $('.for88ba').removeClass('hide');
+            }
+            
+            var paragraphOne = $(".paragraph-1");
+            var paragraphTwo = $(".paragraph-2");
+            $('#carousel-example-generic').on('slid.bs.carousel', function (obj) {
+                flag = $(this).find(".carousel-inner").find(".active").attr('name');
+                switch (flag) {
+                    case "1":
+                        paragraphTwo.css("display", "none");
+                        paragraphOne.css("display", "block");
+                        break;
+                    case "2":
+                        paragraphOne.css("display", "none");
+                        paragraphTwo.css("display", "block");
+                        break;
+                    default:
+                        paragraphTwo.css("display", "none");
+                        paragraphOne.css("display", "block");
+                        break;
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

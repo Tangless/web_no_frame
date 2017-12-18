@@ -1,0 +1,46 @@
+<div id="ChatRoom">
+    <style>
+        @@include('modules/ChatRoom/main.css.min')
+    </style>
+    <div class="supplier-info media">
+        <div class="media-left media-middle" v-bind:uid="id">
+            <img class="media-object avatar" v-bind:src="avatar" alt="工程商头像" width="80">
+        </div>
+        <div class="media-body">
+            <h4 class="media-heading">{{nickname}}</h4>
+            <p class="com">{{com}}&nbsp;&nbsp;<span class="icon-renzheng2 text-primary"></span></p>
+            <p class="business-cate">
+                <span class="item" v-if="has_install">制作安装</span>
+                <span class="item" v-if="has_repair">维修</span>
+                <span class="item" v-if="has_rent">租赁</span>
+            </p>
+        </div>
+        <span class="im-status">在线</span>
+    </div>
+    <div class="msg-pane">
+        <!--<div class="one-message">-->
+            <!--<img class="user-head-icon" src="/img/auth.png"/>-->
+            <!--<div class="msgbody">-->
+                <!--<pre>55gfdsgfdgfgfdsgfsgfsgfdsg55</pre>-->
+                <!--<img class="triangle" src="/img/triangle2.png">-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="one-message self-msg">-->
+            <!--<span class="user-head-icon">您</span>-->
+            <!--<div class="msgbody">-->
+                <!--<pre>佛覅gfdsgfdsgfdsgfdsgtfdsg地方</pre>-->
+                <!--<img class="triangle" src="/img/triangle.png">-->
+            <!--</div>-->
+        <!--</div>-->
+    </div>
+    <form class="input-pane" style="border-bottom-color: rgb(239, 239, 239);">
+        <input id="input" placeholder="想了解哪些细节？问问吧" style="height: 24px;">
+        <span class="icon-picture enclosure" evt="sendImg"></span>
+        <button id="sendMsg" class="btn btn-primary" evt="sendMsg">发送</button>
+        <input id="imgFile" class="hide" type="file" accept="image/*">
+    </form>
+    <div class="sendImgPending hide">
+        <div class="loading"></div>
+        <p class="text">图片上传中</p>
+    </div>
+</div>

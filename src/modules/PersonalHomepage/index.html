@@ -1,0 +1,61 @@
+<div id="PersonalHomepage">
+    <style>
+        @@include('modules/PersonalHomepage/main.css.min')
+    </style>
+    <div class="personalHomepage_Vue">
+        <div class="header">
+            <img v-bind:src="avatar" />
+            <div class="header-right">
+                <div class="call-chat">
+                    <span class="phone icon-phone06" evt="openPhoneNumber"></span>
+                    <span class="chating icon-message02" evt="openChatRoom"></span>
+                    <!--<span class="unread" v-if="unread >0">{{unread}}</span>-->
+                </div>
+                <p class="name">{{nickname}}<span>近期参与 {{info_bid_count}}笔</span></p>
+                <p class="company">{{com}}<span class="icon-renzheng2 text-primary"></span></p>
+                
+                <p class="lable">
+                    <span class="inquiry" v-if="has_install">制作安装</span>
+                    <span class="repair" v-if="has_repair">维修</span>
+                    <span class="rental" v-if="has_rent">租赁</span>
+                </p>
+                <p class="service-area">
+                    服务区域：<span v-for="(city,index) in area_name_list" v-if="index<5">{{city}}&nbsp;</span>
+                    <span v-if="area_name_list.length>=5">…</span>
+                    <span class="hasConsult">已有<span class="text-primary">{{info_consult_count}}</span>人咨询</span>
+                </p>
+            </div>
+        </div>
+        <div class="company-profile" v-if="info_com_summary && info_com_summary != ''">
+            <span class="icon-Fill-1"></span>
+            <p>
+                {{info_com_summary}}
+            </p>
+            <span class="icon-Fill-1-Copy-2"></span>
+        </div>
+        <div class="example" v-if="cases.length > 0">
+            <div class="title">精选案例</div>
+            <div class="case-con">
+                <div class="case-one" v-for="item in cases">
+                        <div class="pic-box"><img class="case-pic" v-bind:src="item.img"></div>
+                        <p class="case-tip">{{item.cate_name}}</p>
+                        <p class="case-info">{{item.type_name}}{{item.span}}  {{item.size}}㎡  </p>
+                        <p class="case-time">{{item.created_at_text}}于{{item.city}}{{item.addr}}完成{{item.cate_name}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="succ-lists" v-if="partic.length > 0">
+            <div class="title">成交记录</div>
+            <div class="lists" v-for="item in partic">
+                <div class="list-head">
+                    <span>{{item.nickname}} | {{item.city}}</span>
+                    <span class="text-primary">{{item.cate_name}}</span>
+                </div>
+                <p class="list-info">
+                    <span>{{item.type_name}}{{item.span}} {{item.size}}㎡ - {{item.city}}{{item.addr}}</span>
+                    <span class="time">{{item.published_at_text}}</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

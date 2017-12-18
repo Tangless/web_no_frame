@@ -1,0 +1,48 @@
+<div id="SelectAddress">
+    <style>
+        @@include('modules/SelectAddress/main.css.min')
+    </style>
+<div class="selectAddress_vue">
+    <div class="select-meun">
+        <li type="prov" evt="choose" v-bind:class="{active:showModel=='prov'}">{{provSelect}}</li>
+        <li type="city" evt="choose" v-bind:class="{active:showModel=='city'}">{{citySelect}}</li>
+        <!--<li type="area" evt="choose" v-bind:class="{active:showModel=='area'}">{{areaSelect}}</li>-->
+    </div>
+    <div class="lists-prov" v-if="showModel == 'prov'">
+        <div class="line">
+            <span class="nav">A-G</span>
+            <p>
+                <i v-for="prov in provList[0]" v-bind:adcode="prov.adcode" evt="chooseProv">{{prov.name}}</i>
+            </p>
+        </div>
+        <div class="line">
+            <span class="nav">H-K</span>
+            <p>
+                <i v-for="prov in provList[1]" v-bind:adcode="prov.adcode" evt="chooseProv">{{prov.name}}</i>
+            </p>
+        </div>
+        <div class="line">
+            <span class="nav">L-S</span>
+            <p>
+                <i v-for="prov in provList[2]" v-bind:adcode="prov.adcode" evt="chooseProv">{{prov.name}}</i>
+            </p>
+        </div>
+        <div class="line">
+            <span class="nav">T-Z</span>
+            <p>
+                <i v-for="prov in provList[3]" v-bind:adcode="prov.adcode" evt="chooseProv">{{prov.name}}</i>
+            </p>
+        </div>
+    </div>
+    <div class="lists-city" v-if="showModel == 'city'">
+        <i v-for="city in cityList" v-bind:adcode="city.adcode" evt="chooseCity">{{city.name}}</i>
+    </div>
+    <!--<div class="lists-area" v-if="showModel == 'area'">-->
+        <!--<i v-for="area in areaList" v-bind:adcode="area.adcode" evt="chooseArea">{{area.name}}</i>-->
+    <!--</div>-->
+    <!--<div class="detail" v-if="showModel == 'area'">-->
+        <!--<p>详细地址</p>-->
+        <!--<input class="input-address" type="text" placeholder="请输入详细地址" v-model="addr" />-->
+    <!--</div>-->
+</div>
+</div>

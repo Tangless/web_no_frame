@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('modules/Head.html')
+</head>
+
+<body>
+<aside id="menu">
+    @@include('modules/Menu.html')
+</aside>
+<section id="quotation">
+
+</section>
+<!--盖住滚动条-->
+<div class="scroll"></div>
+<section id="content">
+</section>
+
+<!-- 百度统计用的frame -->
+<div id="Track" class="hide">
+    <iframe id="TrackFrame" src=""></iframe>
+</div>
+
+<script src="js/vendor.js"></script>
+<script src="js/api.js"></script>
+<script data-main="js/index.js" src="js/require.js"></script>
+
+<!-- baidu统计 -->
+<script async>
+    // 延后加载百度统计，太影响加载速度了；即使此统计代码是所谓异步加载
+    setTimeout(function () {
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?e50695bb38e14c2973d5633e2884e518";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    }, 3000);
+</script>
+</body>
+</html>

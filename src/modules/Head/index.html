@@ -1,0 +1,38 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="renderer" content="webkit">
+<meta name="keywords" content="安装LED显示屏,LED显示屏安装,LED显示屏报价,LED显示屏维修">
+<meta name="description" content="万屏汇是一家提供LED显示屏报价,LED显示屏安装,LED显示屏维修服务的网站,为全国客户提供上门报价,安装,维修服务">
+<link rel="icon" href="favicon.ico">
+
+<title>万屏汇-上门安装LED屏,LED显示屏安装,LED显示屏报价,LED显示屏维修</title>
+
+<link href="css/style.css" rel="stylesheet">
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+<script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="http://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+<script>
+    // ie9 及以下重定向
+    if(location.href.indexOf('wanpinghui.com')>0 && navigator.appName == "Microsoft Internet Explorer" && parseInt(navigator.appVersion.split(";")[1].replace(/[ ]/g, "").replace("MSIE",""))<=9){
+        window.location.href = 'https://ie.wanpinghui.com';
+    }
+
+    // 手机浏览器重定向
+    var sUserAgent = navigator.userAgent.toLowerCase();
+    //var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+    var bIsAndroid = sUserAgent.match(/android/i) == "android";
+    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+
+    if (bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        window.location.href = location.protocol + "//" + location.host.replace('www', 'm');
+    }
+</script>

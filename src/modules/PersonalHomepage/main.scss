@@ -1,0 +1,235 @@
+@import "src/css/mixin";
+
+#PersonalHomepage {
+    padding: 30px;
+    background: #fff;
+    .title{
+        margin: 60px 0 20px;
+        font-size: 18px;
+        color: $black;
+        letter-spacing: 0;
+        line-height: 18px;
+        font-weight: 600;
+    }
+    .header{
+        position: relative;
+        img{
+            position: absolute;
+            height: 140px;
+            width: 140px;
+            top: -3px;
+        }
+        .header-right{
+            padding-left: 170px;
+            margin-bottom: 66px;
+            p{margin: 0;}
+            .name{
+                font-size: 30px;
+                color: $black;
+                letter-spacing: 0;
+                line-height: 30px;
+                margin-bottom: 12px;
+                font-weight: 600;
+                span{
+                    font-size: 12px;
+                    color: $lightgray;
+                    letter-spacing: 0;
+                    line-height: 12px;
+                    vertical-align: bottom;
+                    margin-left: 8px;
+                }
+            }
+            .company{
+                font-size: 18px;
+                color: $gray;
+                letter-spacing: 0;
+                line-height: 18px;
+                margin-bottom: 24px;
+                 .icon-renzheng2{
+                    margin-left: 4px;
+                    position: relative;
+                    top: 2px;
+                }
+            }
+            .call-chat{
+                position: absolute;
+                right: 0;
+                top: 15px;
+                .phone,.chating{
+                    float: right;
+                    height: 40px;
+                    width: 40px;
+                    border-radius: 50%;
+                    border: 1px solid $blue;
+                    text-align: center;
+                    cursor: pointer;
+                    font-size: 18px;
+                    font-weight: 600;
+                    padding: 10px 0;
+                    color: $blue;
+                }
+                .phone{
+                    margin-left: 16px;
+                }
+                .phone:hover,.chating:hover{
+                    color: #fff;
+                    background: $blue;
+                }
+                .unread{
+                    position: absolute;
+                    top: -5px;
+                    right: 33px;
+                    background-color: red;
+                    display: block;
+                    width: 15px;
+                    height: 15px;
+                    border-radius: 50%;
+                    color: #fff;
+                    line-height: 15px;
+                    text-align: center;
+                    font-size: 12px;
+                }
+            }
+            .lable{
+                margin-bottom: 12px;
+                span{
+                    font-size: 12px;
+                    color: #A3C2FC;
+                    letter-spacing: 0;
+                    line-height: 12px;
+                    padding: 3px 6px;
+                    border: 1px solid #A3C2FC;
+                    border-radius: 2px;
+                    margin-right: 5px;
+                    :last-of-type{
+                        margin:0;
+                    }
+                }
+            }
+            .service-area{
+                font-size: 12px;
+                color: $lightgray;
+                letter-spacing: 0;
+                line-height: 14px;
+                .hasConsult{
+                    float: right;
+                }
+            }
+        }
+    }
+    .company-profile{
+        position: relative; 
+        [class^="icon-"]{
+            position: absolute;
+            font-size: 34px;
+        }
+        .icon-youyong-copy{
+            top: 0;
+            left: 0;
+        }
+        .icon-meiyong-copy{
+            right: 0;
+            bottom: 0;
+        }
+        p{
+            display: inline-block;
+            margin: 0 66px;
+            font-size: 12px;
+            color:$lightgray ;
+            letter-spacing: 0;
+            a{
+                color: $blue;
+                cursor: pointer;
+            }
+        }
+    }
+    .example{
+        .case-con {
+            width: 100%;
+            height: 233px;
+        }
+        .case-one {
+            width: 220px;
+            float: left;
+            margin-right: 26px;
+            &:last-child{
+                margin: 0;
+            }
+        }
+        p{
+            margin: 0;
+        }
+        .pic-box {
+            width: 100%;
+            height: 100%;
+            background-color: #e3e8ee;
+        }
+        .case-pic {
+            width: 100%;
+            height: 147px;
+        }
+        .case-tip{
+            font-size: 14px;
+            color: $black;
+            letter-spacing: 0;
+            line-height: 14px;
+            font-weight: 600;
+            margin-top: 24px;
+        }
+        .case-info {
+            font-size: 14px;
+            color: $black;
+            letter-spacing: 0;
+            line-height: 14px;
+            margin: 8px 0 14px 0;
+        }
+        .case-time {
+            font-size: 12px;
+            color: $lightgray;
+            letter-spacing: 0;
+            line-height: 12px;
+        }
+    }
+    .succ-lists{
+        .title{
+            margin-bottom: 0;
+        }
+        .lists{
+            height: 78px;
+            border-bottom: 1px solid $linecolor;
+        }
+        .list-head{
+            float: left;
+            margin-top: 20px;
+            span{
+                display: block;
+                line-height: 16px;
+                font-size: 16px;
+                color: $lightgray;
+                letter-spacing: 0;
+                font-weight: 600;
+            }
+            .text-primary{
+                margin-top: 8px;
+                color: $blue;
+                font-size: 14px;
+                line-height: 14px;
+                font-weight: 500;
+            }
+        }
+        .list-info{
+            height: 78px;
+            line-height: 78px;
+            font-size: 14px;
+            color: $lightgray;
+            letter-spacing: 0;
+            margin-left: 195px;
+            margin-bottom: 0;
+            .time{
+                float: right;
+                font-size: 12px;
+                color: $lightgray;
+            }
+        }
+    }
+}

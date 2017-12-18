@@ -1,0 +1,20 @@
+<div id="PhoneNumber">
+    <style>
+        @@include('modules/PhoneNumber/main.css.min')
+    </style>
+    <div class="phoneNumber_Vue">
+        <p class="count-down-word">电话 <span class="min">120</span>s 后失效，请尽快拨打</p>
+        <p class="mobile">{{mobileInit}}</p>
+        <p class="tip">为保护您的隐私，此号码为中间号</p>
+
+        <img v-bind:src="avatar"/>
+
+        <div class="name">{{nickname}}</div>
+        <div class="company">{{com}}</div>
+        <div class="lable">
+            <span class="inquiry" v-if="has_install">制作安装</span>
+            <span class="repair" v-if="has_repair">维修</span>
+            <span class="rental" v-if="has_rent">租赁</span>
+        </div>
+    </div>
+</div>
